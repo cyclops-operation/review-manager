@@ -9,26 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/eslint": "^8.56.10",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18",
-    "tailwindcss": "^3.3.0",
-    "daisyui": "^4.10.5",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.3.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "@types/eslint": "^8.56.10",
     "autoprefixer": "^10.0.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.1.4",
     "eslint-plugin-tailwindcss": "^3.15.1",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "typescript": "^5"
+    "typescript": "^5",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^3.3.0",
+    "daisyui": "^4.10.5"
   }
 }
