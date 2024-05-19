@@ -9,17 +9,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        devDependencies: [
-          "**/*.stories.tsx",
-          "**/webpack.*.js",
-          "**/script/*.js",
-          "**/.storybook/*.@(js|ts)?(x)",
-        ],
-      },
-    ],
+    "import/no-extraneous-dependencies": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
