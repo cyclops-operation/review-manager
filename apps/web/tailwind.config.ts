@@ -48,7 +48,7 @@ const config: Config = {
   },
   plugins: [
     daisyui,
-    plugin(function ({ addComponents, theme }) {
+    plugin(({ addComponents, theme }) => {
       addComponents({
         ".chat-bubble-basic": {
           backgroundColor: theme("colors.zinc.100"),

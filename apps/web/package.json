@@ -6,39 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky",
-    "lint-staged": "lint-staged",
-    "commitlint": "commitlint --edit"
+    "lint": "next lint"
   },
   "dependencies": {
+    "@types/eslint": "^8.56.10",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwindcss": "^3.3.0",
+    "daisyui": "^4.10.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/parser": "^7.7.1",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.0.1",
     "clsx": "^2.1.1",
-    "daisyui": "^4.10.5",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.1.4",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tailwindcss": "^3.15.1",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
     "postcss": "^8",
-    "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
 }
