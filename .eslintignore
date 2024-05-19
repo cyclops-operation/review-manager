@@ -2,6 +2,8 @@ dist
 coverage
 node_modules
 !.storybook
+*.d.ts
+**/*.d.ts
 *.config.js
 **/*.config.js
 *.config.ts
