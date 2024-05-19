@@ -1,74 +1,70 @@
 import { cn } from "@/utils/tailwindcss"
 
-const ChatDesign = () => {
-  return (
-    <section className="space-y-10">
-      <h1 className="text-heading-1">Chat Design</h1>
+const ChatDesign = () => (
+  <section className="space-y-10">
+    <h1 className="text-heading-1">Chat Design</h1>
+    <div>
+      <div className="w-fit rounded-lg bg-emerald-900 p-2">
+        <svg
+          className="size-8 stroke-zinc-100"
+          width="100%"
+          height="100%"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.5 13V22M12.5 13L4.5 8M12.5 13L20.5 8M8.5 5.5L16.5 10.5M4.5 8L12.5 3L20.5 8V17L12.5 22L4.5 17V8Z"
+            stroke="current"
+            strokeWidth="1.2"
+          />
+        </svg>
+      </div>
+    </div>
 
-      <div>
-        <div className="w-fit rounded-lg bg-emerald-900 p-2">
-          <svg
-            className="size-8 stroke-zinc-100"
-            width="100%"
-            height="100%"
-            viewBox="0 0 25 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    <div className="flex w-[600px] flex-col gap-4">
+      {CHAT_EXAMPLE.map(({ id, speaker: { type, thumbnail }, content }) => {
+        const isManager = type === "manager"
+        return (
+          <div
+            key={`${id}`}
+            className={cn("flex w-full gap-3", {
+              "self-end": !isManager,
+            })}
           >
-            <path
-              d="M12.5 13V22M12.5 13L4.5 8M12.5 13L20.5 8M8.5 5.5L16.5 10.5M4.5 8L12.5 3L20.5 8V17L12.5 22L4.5 17V8Z"
-              stroke="current"
-              stroke-width="1.2"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <div className="flex w-[600px] flex-col gap-4">
-        {CHAT_EXAMPLE.map(
-          ({ speaker: { type, thumbnail }, content }, index) => {
-            const isManager = type === "manager"
-            return (
-              <div
-                key={index}
-                className={cn("flex w-full gap-3", {
-                  "self-end": !isManager,
-                })}
-              >
-                <div className={cn("avatar", { "order-last": !isManager })}>
-                  <div className="size-10 rounded-full">
-                    <img src={thumbnail} alt={thumbnail} />
-                  </div>
-                </div>
-
-                <ul className="w-full space-y-2">
-                  {content.map((text) => (
-                    <li
-                      key={String(text)}
-                      className={cn(
-                        "chat-bubble flex items-center whitespace-pre-line text-sm",
-                        {
-                          "chat-bubble-basic float-end": !isManager,
-                        }
-                      )}
-                    >
-                      {text}
-                    </li>
-                  ))}
-                </ul>
+            <div className={cn("avatar", { "order-last": !isManager })}>
+              <div className="size-10 rounded-full">
+                <img src={thumbnail} alt={thumbnail} />
               </div>
-            )
-          }
-        )}
-      </div>
-    </section>
-  )
-}
+            </div>
+
+            <ul className="w-full space-y-2">
+              {content.map((text) => (
+                <li
+                  key={String(text)}
+                  className={cn(
+                    "chat-bubble flex items-center whitespace-pre-line text-sm",
+                    {
+                      "chat-bubble-basic float-end": !isManager,
+                    }
+                  )}
+                >
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      })}
+    </div>
+  </section>
+)
 
 export default ChatDesign
 
 const CHAT_EXAMPLE = [
   {
+    id: 1,
     speaker: {
       type: "manager",
       thumbnail:
@@ -80,6 +76,7 @@ const CHAT_EXAMPLE = [
     ],
   },
   {
+    id: 2,
     speaker: {
       type: "me",
       thumbnail:
@@ -91,6 +88,7 @@ const CHAT_EXAMPLE = [
     ],
   },
   {
+    id: 3,
     speaker: {
       type: "manager",
       thumbnail:
@@ -102,6 +100,7 @@ const CHAT_EXAMPLE = [
     ],
   },
   {
+    id: 4,
     speaker: {
       type: "me",
       thumbnail:
@@ -113,6 +112,7 @@ const CHAT_EXAMPLE = [
     ],
   },
   {
+    id: 5,
     speaker: {
       type: "manager",
       thumbnail:
